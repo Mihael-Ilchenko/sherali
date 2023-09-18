@@ -9,6 +9,9 @@
         justify-content: space-between;
         padding: 31px 35px;
         position: relative;
+        >*:not(:last-child) {
+            margin-right: 40px;
+        }
     }
     &-swiper-wrap {
         position: relative;
@@ -17,7 +20,12 @@
         overflow: hidden;
     }
     .swiper {
-        height: 55vw;
+        // height: 50vw;
+        max-height: 65vw;
+        max-width: 1320px;
+        img {
+            object-fit: cover;
+        }
     }
     .swiper-button-prev,
     .swiper-button-next {
@@ -34,6 +42,31 @@
         transform: rotate(90deg)
     }
     .swiper-slide {
-        max-height: auto;
+        height: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    .reviews {
+        &__wrap {
+            flex-direction: column;
+            >*:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            top: 50%;
+        }
+        .swiper-button-prev {
+            transform: rotate(180deg);
+            left: 8px;
+        }
+        .swiper-button-next {
+            right: 8px;
+            transform: rotate(-360deg);
+            left: auto;
+        }
     }
 }

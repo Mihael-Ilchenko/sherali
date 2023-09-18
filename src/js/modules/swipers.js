@@ -43,19 +43,20 @@ const projectsSwiper = new Swiper('.projects__swiper', {
 });
 
 const reviewsLeftSwiper = new Swiper('.reviews-swiper', {
-    loop: true,
+
 
     freeMode: true,
+
     spaceBetween: 15,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    slidesPerView: 1,
+    slidesPerView: 2,
     breakpoints: {
         768: {
-            slidesPerView: 1.6,
             direction: 'vertical',
+
         },
 
     }
